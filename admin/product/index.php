@@ -282,6 +282,7 @@ thead{
   	<th>PRICE</th>
   	<th>CATEGORY</th>
     <th>IMAGE</th>
+  <!--   <th>UPDATE</th> -->
     <th>DELETE</th>
 
   </thead>
@@ -295,8 +296,6 @@ thead{
 
 while($row = mysqli_fetch_array($record)){
   ?>
-
-
 	
 <tr>
 	<td><?php echo"$row[id]";?></td>
@@ -306,7 +305,9 @@ while($row = mysqli_fetch_array($record)){
 	<td>
     <?php echo"<img src='$row[pimage]' height='70px' width='80px'>";?>
   </td>
-  <td><button href=" ">Delete</button></td>
+<!--   <td><button><a href='update.php?Id=<?php echo"$row[id]";?>'>update</a></button></td>
+ -->  <td><button><a href='delete.php?Id=<?php echo"$row[id]";?>'>Delete</a></button></td>      
+
 </tr>
 <?php
 	}
